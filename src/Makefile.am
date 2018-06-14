@@ -499,7 +499,7 @@ libdashconsensus_la_SOURCES = \
   utilstrencodings.cpp
 
 if GLIBC_BACK_COMPAT
-  libcashconsensus_la_SOURCES += compat/glibc_compat.cpp
+  libdashconsensus_la_SOURCES += compat/glibc_compat.cpp
 endif
 
 libdashconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
