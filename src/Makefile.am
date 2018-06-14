@@ -49,8 +49,8 @@ EXTRA_LIBRARIES += libbitcoin_zmq.a
 endif
 
 if BUILD_BITCOIN_LIBS
-lib_LTLIBRARIES = libdashconsensus.la
-LIBBITCOIN_CONSENSUS=libdashconsensus.la
+lib_LTLIBRARIES = libimgcashconsensus.la
+LIBBITCOIN_CONSENSUS=libimgcashconsensus.la
 else
 LIBBITCOIN_CONSENSUS=
 endif
@@ -60,11 +60,11 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += dashd
+  bin_PROGRAMS += imgcashd
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += dash-cli dash-tx
+  bin_PROGRAMS += imgcash-cli imgcash-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
