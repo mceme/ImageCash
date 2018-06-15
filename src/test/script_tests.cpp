@@ -15,7 +15,7 @@
 #include "test/test_dash.h"
 
 #if defined(HAVE_CONSENSUS_LIB)
-#include "script/dashconsensus.h"
+#include "script/imgcashconsensus.h"
 #endif
 
 #include <fstream>
