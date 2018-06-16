@@ -141,29 +141,23 @@ public:
 
         genesis = CreateGenesisBlock(1390095618, 4018513 , 0x1e0ffff0, 1, 50 * COIN);
 
+//        uint32_t nNonce;
+//        for(nNonce = 0; ; nNonce++){
+//            genesis.nNonce = nNonce;
+//            // You can also update genesis.nTime
+//
+//            if (CheckProofOfWork(genesis.GetHash(), genesis.nBits, consensus)) {
+//                printf("hash: %s\n", genesis.GetHash().GetHex().c_str());
+//                printf("nonce: %i\n", nNonce);
+//                printf("hashMerkleRoot: %i\n",   genesis.hashMerkleRoot.GetHex().c_str());
+//
+//                break;
+//               }
+//          }
 
-
-        uint32_t nNonce;
-        for(nNonce = 0; ; nNonce++){
-            genesis.nNonce = nNonce;
-            // You can also update genesis.nTime
-
-            if (CheckProofOfWork(genesis.GetHash(), genesis.nBits, consensus)) {
-                printf("hash: %s\n", genesis.GetHash().GetHex().c_str());
-                printf("nonce: %i\n", nNonce);
-                printf("hashMerkleRoot: %i\n",   genesis.hashMerkleRoot);
-
-                break;
-            }
-
-        }
         consensus.hashGenesisBlock = genesis.GetHash();
-
-
         assert(consensus.hashGenesisBlock == uint256S("0x0000008fb2cb1b3d7c579d619ba9b9e939e4fd79f621e31c2c1bd9fd5e0b54af"));
         //assert(genesis.hashMerkleRoot == uint256S("0xaf36534aca01ec6a50255b349b1efbd8d4fdcd9a4253da1a4d9bcb1f40e1b214"));
-
-
         //vSeeds.push_back(CDNSSeedData("dash.org", "dnsseed.dash.org"));
         //vSeeds.push_back(CDNSSeedData("dashdot.io", "dnsseed.dashdot.io"));
         //vSeeds.push_back(CDNSSeedData("masternode.io", "dnsseed.masternode.io"));
