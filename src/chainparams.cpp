@@ -138,7 +138,27 @@ public:
         nPruneAfterHeight = 100000;
 
         genesis = CreateGenesisBlock(1390095618, 1529084551 , 0x1e0ffff0, 1, 50 * COIN);
+
         consensus.hashGenesisBlock = genesis.GetHash();
+
+        uint32_t nNonce;
+        for(nNonce = 0; ; nNonce++){
+            genesis.nNonce = nNonce;
+            // You can also update genesis.nTime
+
+            if (CheckProofOfWork(genesis.GetHash(), genesis.nBits, consensus)) {
+                printf("hash: %s\n", genesis.GetHash().GetHex().c_str());
+                printf("nonce: %i\n", nNonce);
+                break;
+            }
+
+            if (nNonce == 0) {
+                printf("Can't find a valid nNonce.\n");
+                break;
+            }
+        }
+
+
        // printf("%s\n", consensus.hashGenesisBlock.ToString().c_str());
        // printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
         assert(consensus.hashGenesisBlock == uint256S("0x1cc1c376e2589f2dffe38f6e95d88230402cd90e815feb615b81c51c998f7d6d"));
