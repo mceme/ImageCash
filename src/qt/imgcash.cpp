@@ -259,7 +259,7 @@ private:
     void startThread();
 };
 
-#include "dash.moc"
+#include "imgcash.moc"
 
 BitcoinCore::BitcoinCore():
     QObject()
