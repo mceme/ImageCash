@@ -6,7 +6,7 @@
 
 #include "chainparams.h"
 #include "consensus/merkle.h"
-#include "pow.h"
+
 #include "tinyformat.h"
 #include "util.h"
 #include "utilstrencodings.h"
@@ -16,6 +16,8 @@
 #include <boost/assign/list_of.hpp>
 
 #include "chainparamsseeds.h"
+
+#include "pow.h"
 
 static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesisOutputScript, uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
@@ -152,10 +154,6 @@ public:
                 break;
             }
 
-            if (nNonce == 0) {
-                printf("Can't find a valid nNonce.\n");
-                break;
-            }
         }
 
 
