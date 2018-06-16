@@ -6,7 +6,7 @@
 
 #include "chainparams.h"
 #include "consensus/merkle.h"
-
+#include "pow.h"
 #include "tinyformat.h"
 #include "util.h"
 #include "utilstrencodings.h"
