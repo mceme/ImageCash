@@ -143,7 +143,7 @@ bool AppInit(int argc, char* argv[])
         fDaemon = GetBoolArg("-daemon", false);
         if (fDaemon)
         {
-            fprintf(stdout, "Dash Core server starting\n");
+            fprintf(stdout, "Imgcash Core server starting\n");
 
             // Daemonize
             pid_t pid = fork();
