@@ -273,8 +273,8 @@ public:
 //                       }
 //                  }
 
-        printf("hashMerkleRoot: %s\n",   genesis.hashMerkleRoot.GetHex().c_str());
-        printf("GetHex: %s\n",   genesis.hashMerkleRoot.GetHex().c_str());
+        //printf("hashMerkleRoot: %s\n",   genesis.hashMerkleRoot.GetHex().c_str());
+        //printf("GetHex: %s\n",   genesis.hashMerkleRoot.GetHex().c_str());
 
         assert(consensus.hashGenesisBlock == uint256S("0xb1c703380ae5a1bdc9ba5a3cba0900c216a7e6497f73b6323ac5e56cc95d6ec0"));
         //assert(genesis.hashMerkleRoot == uint256S("0xaf36534aca01ec6a50255b349b1efbd8d4fdcd9a4253da1a4d9bcb1f40e1b214"));
