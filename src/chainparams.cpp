@@ -146,7 +146,9 @@ public:
         printf("GetHex: %i\n",   genesis.hashMerkleRoot.GetHex().c_str());
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x0000008fb2cb1b3d7c579d619ba9b9e939e4fd79f621e31c2c1bd9fd5e0b54af"));
-        assert(genesis.hashMerkleRoot == uint256S("0xaf36534aca01ec6a50255b349b1efbd8d4fdcd9a4253da1a4d9bcb1f40e1b214"));
+
+       // assert(genesis.hashMerkleRoot == uint256S("0xaf36534aca01ec6a50255b349b1efbd8d4fdcd9a4253da1a4d9bcb1f40e1b214"));
+        assert(genesis.hashMerkleRoot == uint256("0x"));
 
         vSeeds.clear();
         // ImgCash addresses start with 'X'
@@ -261,25 +263,25 @@ public:
         consensus.hashGenesisBlock = genesis.GetHash();
 
 
-                uint32_t nNonce;
-                for(nNonce = 0; ; nNonce++){
-                    genesis.nNonce = nNonce;
-                    // You can also update genesis.nTime
-
-                    if (CheckProofOfWork(genesis.GetHash(), genesis.nBits, consensus)) {
-                        printf("hash: %s\n", genesis.GetHash().GetHex().c_str());
-                        printf("nonce: %i\n", nNonce);
-                        printf("hashMerkleRoot: %i\n",   genesis.hashMerkleRoot.GetHex().c_str());
-
-                        break;
-                       }
-                  }
+//                uint32_t nNonce;
+//                for(nNonce = 0; ; nNonce++){
+//                    genesis.nNonce = nNonce;
+//                    // You can also update genesis.nTime
+//
+//                    if (CheckProofOfWork(genesis.GetHash(), genesis.nBits, consensus)) {
+//                        printf("hash: %s\n", genesis.GetHash().GetHex().c_str());
+//                        printf("nonce: %i\n", nNonce);
+//                        printf("hashMerkleRoot: %i\n",   genesis.hashMerkleRoot.GetHex().c_str());
+//
+//                        break;
+//                       }
+//                  }
 
         printf("hashMerkleRoot: %i\n",  genesis.hashMerkleRoot.GetHex().c_str());
         printf("GetHex: %i\n",   genesis.hashMerkleRoot.GetHex().c_str());
 
         assert(consensus.hashGenesisBlock == uint256S("0xb1c703380ae5a1bdc9ba5a3cba0900c216a7e6497f73b6323ac5e56cc95d6ec0"));
-        assert(genesis.hashMerkleRoot == uint256S("0xe0028eb9648db56b1ac77cf090b99048a8007e2bb64b68f092c03c7f56a662c7"));
+        assert(genesis.hashMerkleRoot == uint256("0x"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
