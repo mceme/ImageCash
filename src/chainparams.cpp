@@ -141,45 +141,31 @@ public:
 
         genesis = CreateGenesisBlock(1390095618, 4018513 , 0x1e0ffff0, 1, 50 * COIN);
 
-//        uint32_t nNonce;
-//        for(nNonce = 0; ; nNonce++){
-//            genesis.nNonce = nNonce;
-//            // You can also update genesis.nTime
-//
-//            if (CheckProofOfWork(genesis.GetHash(), genesis.nBits, consensus)) {
-//                printf("hash: %s\n", genesis.GetHash().GetHex().c_str());
-//                printf("nonce: %i\n", nNonce);
-//                printf("hashMerkleRoot: %i\n",   genesis.hashMerkleRoot.GetHex().c_str());
-//
-//                break;
-//               }
-//          }
 
+        printf("hashMerkleRoot: %i\n",   genesis.hashMerkleRoot.ToString());
+        printf("GetHex: %i\n",   genesis.hashMerkleRoot.GetHex().c_str());
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x0000008fb2cb1b3d7c579d619ba9b9e939e4fd79f621e31c2c1bd9fd5e0b54af"));
-        //assert(genesis.hashMerkleRoot == uint256S("0xaf36534aca01ec6a50255b349b1efbd8d4fdcd9a4253da1a4d9bcb1f40e1b214"));
-        //vSeeds.push_back(CDNSSeedData("dash.org", "dnsseed.dash.org"));
-        //vSeeds.push_back(CDNSSeedData("dashdot.io", "dnsseed.dashdot.io"));
-        //vSeeds.push_back(CDNSSeedData("masternode.io", "dnsseed.masternode.io"));
-        //vSeeds.push_back(CDNSSeedData("dashpay.io", "dnsseed.dashpay.io"));
+        assert(genesis.hashMerkleRoot == uint256S("0xaf36534aca01ec6a50255b349b1efbd8d4fdcd9a4253da1a4d9bcb1f40e1b214"));
+
         vSeeds.clear();
-        // Dash addresses start with 'X'
+        // ImgCash addresses start with 'X'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,51);
-        // Dash script addresses start with '7'
+        // ImgCash script addresses start with '7'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,16);
-        // Dash private keys start with '7' or 'X'
+        // ImgCash private keys start with '7' or 'X'
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,204);
-        // Dash BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
+        // ImgCash BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
-        // Dash BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
+        // ImgCash BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
 
-        // Dash BIP44 coin type is '5'
+        // ImgCash BIP44 coin type is '5'
         nExtCoinType = 5;
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
-        fMiningRequiresPeers = true;
+        fMiningRequiresPeers = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
         fMineBlocksOnDemand = false;
@@ -194,7 +180,7 @@ public:
                  ( 0, uint256S("0x0000008fb2cb1b3d7c579d619ba9b9e939e4fd79f621e31c2c1bd9fd5e0b54af")),
 				 1390095618,
                  0,
-                 10
+                 500
              };
 
 
@@ -270,14 +256,32 @@ public:
         nPruneAfterHeight = 1000;
 
         genesis = CreateGenesisBlock(1390666206UL, 3861367235UL, 0x1e0ffff0, 1, 50 * COIN);
+
+
         consensus.hashGenesisBlock = genesis.GetHash();
-        //assert(consensus.hashGenesisBlock == uint256S("0x00000bafbc94add76cb75e2ec92894837288a481e5c005f6563d91623bf8bc2c"));
-        //assert(genesis.hashMerkleRoot == uint256S("0xe0028eb9648db56b1ac77cf090b99048a8007e2bb64b68f092c03c7f56a662c7"));
+
+
+        //        uint32_t nNonce;
+        //        for(nNonce = 0; ; nNonce++){
+        //            genesis.nNonce = nNonce;
+        //            // You can also update genesis.nTime
+        //
+        //            if (CheckProofOfWork(genesis.GetHash(), genesis.nBits, consensus)) {
+        //                printf("hash: %s\n", genesis.GetHash().GetHex().c_str());
+        //                printf("nonce: %i\n", nNonce);
+        //                printf("hashMerkleRoot: %i\n",   genesis.hashMerkleRoot.GetHex().c_str());
+        //
+        //                break;
+        //               }
+        //          }
+
+        assert(consensus.hashGenesisBlock == uint256S("0x00000bafbc94add76cb75e2ec92894837288a481e5c005f6563d91623bf8bc2c"));
+        assert(genesis.hashMerkleRoot == uint256S("0xe0028eb9648db56b1ac77cf090b99048a8007e2bb64b68f092c03c7f56a662c7"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("dashdot.io",  "testnet-seed.dashdot.io"));
-        vSeeds.push_back(CDNSSeedData("masternode.io", "test.dnsseed.masternode.io"));
+        //vSeeds.push_back(CDNSSeedData("dashdot.io",  "testnet-seed.dashdot.io"));
+        //vSeeds.push_back(CDNSSeedData("masternode.io", "test.dnsseed.masternode.io"));
 
         // Testnet Dash addresses start with 'y'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,140);
