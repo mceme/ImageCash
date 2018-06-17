@@ -278,7 +278,7 @@ public:
         printf("hashMerkleRoot: %i\n",  genesis.hashMerkleRoot.GetHex().c_str());
         printf("GetHex: %i\n",   genesis.hashMerkleRoot.GetHex().c_str());
 
-        assert(consensus.hashGenesisBlock == uint256S("0x00000bafbc94add76cb75e2ec92894837288a481e5c005f6563d91623bf8bc2c"));
+        assert(consensus.hashGenesisBlock == uint256S("0xb1c703380ae5a1bdc9ba5a3cba0900c216a7e6497f73b6323ac5e56cc95d6ec0"));
         assert(genesis.hashMerkleRoot == uint256S("0xe0028eb9648db56b1ac77cf090b99048a8007e2bb64b68f092c03c7f56a662c7"));
 
         vFixedSeeds.clear();
