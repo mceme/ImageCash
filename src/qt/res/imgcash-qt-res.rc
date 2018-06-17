@@ -18,14 +18,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Dash"
-            VALUE "FileDescription",    "Dash Core (GUI node for Dash)"
+            VALUE "CompanyName",        "ImgCash"
+            VALUE "FileDescription",    "ImgCash Core (GUI node for Dash)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "dash-qt"
+            VALUE "InternalName",       "imgcash-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "dash-qt.exe"
-            VALUE "ProductName",        "Dash Core"
+            VALUE "OriginalFilename",   "imgcash-qt.exe"
+            VALUE "ProductName",        "ImgCash Core"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END
