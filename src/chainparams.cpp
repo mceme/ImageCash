@@ -261,19 +261,22 @@ public:
         consensus.hashGenesisBlock = genesis.GetHash();
 
 
-        //        uint32_t nNonce;
-        //        for(nNonce = 0; ; nNonce++){
-        //            genesis.nNonce = nNonce;
-        //            // You can also update genesis.nTime
-        //
-        //            if (CheckProofOfWork(genesis.GetHash(), genesis.nBits, consensus)) {
-        //                printf("hash: %s\n", genesis.GetHash().GetHex().c_str());
-        //                printf("nonce: %i\n", nNonce);
-        //                printf("hashMerkleRoot: %i\n",   genesis.hashMerkleRoot.GetHex().c_str());
-        //
-        //                break;
-        //               }
-        //          }
+                uint32_t nNonce;
+                for(nNonce = 0; ; nNonce++){
+                    genesis.nNonce = nNonce;
+                    // You can also update genesis.nTime
+
+                    if (CheckProofOfWork(genesis.GetHash(), genesis.nBits, consensus)) {
+                        printf("hash: %s\n", genesis.GetHash().GetHex().c_str());
+                        printf("nonce: %i\n", nNonce);
+                        printf("hashMerkleRoot: %i\n",   genesis.hashMerkleRoot.GetHex().c_str());
+
+                        break;
+                       }
+                  }
+
+        printf("hashMerkleRoot: %i\n",  genesis.hashMerkleRoot.ToString().c_str());
+        printf("GetHex: %i\n",   genesis.hashMerkleRoot.GetHex().c_str());
 
         assert(consensus.hashGenesisBlock == uint256S("0x00000bafbc94add76cb75e2ec92894837288a481e5c005f6563d91623bf8bc2c"));
         assert(genesis.hashMerkleRoot == uint256S("0xe0028eb9648db56b1ac77cf090b99048a8007e2bb64b68f092c03c7f56a662c7"));
