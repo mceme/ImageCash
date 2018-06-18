@@ -581,7 +581,7 @@ std::string HelpMessage(HelpMessageMode mode)
     }
     strUsage += HelpMessageOpt("-shrinkdebugfile", _("Shrink debug.log file on client startup (default: 1 when no -debug)"));
     AppendParamsHelpMessages(strUsage, showDebug);
-    strUsage += HelpMessageOpt("-litemode=<n>", strprintf(_("Disable all Dash specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)"), 0));
+    strUsage += HelpMessageOpt("-litemode=<n>", strprintf(_("Disable all IMGCash specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)"), 0));
 
     strUsage += HelpMessageGroup(_("Masternode options:"));
     strUsage += HelpMessageOpt("-masternode=<n>", strprintf(_("Enable the client to act as a masternode (0-1, default: %u)"), 0));
@@ -643,7 +643,7 @@ std::string LicenseInfo()
     // todo: remove urls from translations on next change
     return FormatParagraph(strprintf(_("Copyright (C) 2009-%i The Bitcoin Core Developers"), COPYRIGHT_YEAR)) + "\n" +
            "\n" +
-           FormatParagraph(strprintf(_("Copyright (C) 2014-%i The Dash Core Developers"), COPYRIGHT_YEAR)) + "\n" +
+           FormatParagraph(strprintf(_("Copyright (C) 2014-%i The IMGCash Core Developers"), COPYRIGHT_YEAR)) + "\n" +
            "\n" +
            FormatParagraph(_("This is experimental software.")) + "\n" +
            "\n" +
@@ -1231,7 +1231,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
 
     // Sanity check
     if (!InitSanityCheck())
-        return InitError(_("Initialization sanity check failed. Dash Core is shutting down."));
+        return InitError(_("Initialization sanity check failed. IMGCash Core is shutting down."));
 
     std::string strDataDir = GetDataDir().string();
 #ifdef ENABLE_WALLET
@@ -1248,9 +1248,9 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
         static boost::interprocess::file_lock lock(pathLockFile.string().c_str());
         // Wait maximum 10 seconds if an old wallet is still running. Avoids lockup during restart
         if (!lock.timed_lock(boost::get_system_time() + boost::posix_time::seconds(10)))
-            return InitError(strprintf(_("Cannot obtain a lock on data directory %s. Dash Core is probably already running."), strDataDir));
+            return InitError(strprintf(_("Cannot obtain a lock on data directory %s. IMGCash Core is probably already running."), strDataDir));
     } catch(const boost::interprocess::interprocess_exception& e) {
-        return InitError(strprintf(_("Cannot obtain a lock on data directory %s. Dash Core is probably already running.") + " %s.", strDataDir, e.what()));
+        return InitError(strprintf(_("Cannot obtain a lock on data directory %s. IMGCash Core is probably already running.") + " %s.", strDataDir, e.what()));
     }
 
 #ifndef WIN32
@@ -1713,10 +1713,10 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
                              " or address book entries might be missing or incorrect."));
             }
             else if (nLoadWalletRet == DB_TOO_NEW)
-                strErrors << _("Error loading wallet.dat: Wallet requires newer version of Dash Core") << "\n";
+                strErrors << _("Error loading wallet.dat: Wallet requires newer version of IMGCash Core") << "\n";
             else if (nLoadWalletRet == DB_NEED_REWRITE)
             {
-                strErrors << _("Wallet needed to be rewritten: restart Dash Core to complete") << "\n";
+                strErrors << _("Wallet needed to be rewritten: restart IMGCash Core to complete") << "\n";
                 LogPrintf("%s", strErrors.str());
                 return InitError(strErrors.str());
             }
