@@ -1249,7 +1249,7 @@
   <tabstop>deleteButton_s</tabstop>
  </tabstops>
  <resources>
-  <include location="../dash.qrc"/>
+  <include location="../imgcash.qrc"/>
  </resources>
  <connections/>
 </ui>
