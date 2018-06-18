@@ -18,7 +18,7 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "ImgCash"
+            VALUE "CompanyName",        "IMGCASH"
             VALUE "FileDescription",    "ImgCash Core (GUI node for Dash)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "imgcash-qt"
