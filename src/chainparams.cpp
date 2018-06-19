@@ -147,10 +147,6 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0xaf36534aca01ec6a50255b349b1efbd8d4fdcd9a4253da1a4d9bcb1f40e1b214"));
 
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("18.191.209.224", "imagehosty.com"));
-        vSeeds.push_back(CDNSSeedData("[2002:951c:88e0::951c:88e0]", "push.imagehosty.com"));
-        vSeeds.push_back(CDNSSeedData("115.77.190.144", "seed.imagehosty.com"));
-
 
         // ImgCash addresses start with 'X'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,51);
