@@ -50,9 +50,9 @@ Var StartMenuGroup
 # Installer attributes
 OutFile @abs_top_srcdir@/dashcore-${VERSION}-win@WINDOWS_BITS@-setup.exe
 !if "@WINDOWS_BITS@" == "64"
-InstallDir $PROGRAMFILES64\DashCore
+InstallDir $PROGRAMFILES64\ImgCashCore
 !else
-InstallDir $PROGRAMFILES\DashCore
+InstallDir $PROGRAMFILES\ImgCashCore
 !endif
 CRCCheck on
 XPStyle on
@@ -73,19 +73,19 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File @abs_top_srcdir@/release/dash-qt.exe
+    File @abs_top_srcdir@/release/imgcash-qt.exe
     File /oname=COPYING.txt @abs_top_srcdir@/COPYING
     File /oname=readme.txt @abs_top_srcdir@/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File @abs_top_srcdir@/release/dashd.exe
-    File @abs_top_srcdir@/release/dash-cli.exe
+    File @abs_top_srcdir@/release/imgcashd.exe
+    File @abs_top_srcdir@/release/imgcash-cli.exe
     SetOutPath $INSTDIR\doc
     File /r @abs_top_srcdir@/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 
     # Remove old wxwidgets-based-dash executable and locales:
-    Delete /REBOOTOK $INSTDIR\dash.exe
+    Delete /REBOOTOK $INSTDIR\imgcash.exe
     RMDir /r /REBOOTOK $INSTDIR\locale
 SectionEnd
 
