@@ -150,6 +150,9 @@ public:
 
 		vFixedSeeds.clear();
         vSeeds.clear();
+		vSeeds.push_back(CDNSSeedData("0","18.191.209.224"));
+        vSeeds.push_back(CDNSSeedData("1","115.77.190.144"));
+		vSeeds.push_back(CDNSSeedData("1","18.216.217.124"));
         // ImgCash addresses start with 'X'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,51);
         // ImgCash script addresses start with '7'
