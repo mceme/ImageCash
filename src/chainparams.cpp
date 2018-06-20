@@ -146,8 +146,10 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x0000008fb2cb1b3d7c579d619ba9b9e939e4fd79f621e31c2c1bd9fd5e0b54af"));
         assert(genesis.hashMerkleRoot == uint256S("0xaf36534aca01ec6a50255b349b1efbd8d4fdcd9a4253da1a4d9bcb1f40e1b214"));
 
-        vSeeds.clear();
 
+
+		vFixedSeeds.clear();
+        vSeeds.clear();
         // ImgCash addresses start with 'X'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,51);
         // ImgCash script addresses start with '7'
