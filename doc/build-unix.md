@@ -1,12 +1,12 @@
 UNIX BUILD NOTES
 ====================
-Some notes on how to build Dash Core in Unix.
+Some notes on how to build Core in Unix.
 
 (for OpenBSD specific instructions, see [build-openbsd.md](build-openbsd.md))
 
 Note
 ---------------------
-Always use absolute paths to configure and compile Dash Core and the dependencies,
+Always use absolute paths to configure and compile Core and the dependencies,
 for example, when specifying the the path of the dependency:
 
 	../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
@@ -24,7 +24,7 @@ make
 make install # optional
 ```
 
-This will build dash-qt as well if the dependencies are met.
+This will build qt as well if the dependencies are met.
 
 Dependencies
 ---------------------
