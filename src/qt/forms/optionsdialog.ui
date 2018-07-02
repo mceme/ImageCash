@@ -253,7 +253,7 @@
             <string notr="true"/>
            </property>
            <property name="text">
-            <string>Amount of Dash to keep anonymized</string>
+            <string>Amount of IMGC to keep anonymized</string>
            </property>
           </widget>
          </item>
