@@ -14,11 +14,11 @@ Copyright (c) 2014-2017 Dash Core Developers
 Copyright (c) 2018- ImgCash Core Developers
 
 
-What is ImgCash?
+What is ImageCash?
 ----------------
 
-ImgCash is an experimental new digital currency that enables anonymous, instant
-payments to anyone, anywhere in the world. ImgCash uses peer-to-peer technology
+ImageCash is an experimental new digital currency that enables anonymous, instant
+payments to anyone, anywhere in the world, sign images. ImageCash uses peer-to-peer technology
 to operate with no central authority: managing transactions and issuing money
 are carried out collectively by the network. ImgCash Core is the name of open
 source software which enables the use of this currency.
@@ -27,7 +27,7 @@ source software which enables the use of this currency.
 License
 -------
 
-SibCore is released under the terms of the MIT license. See [COPYING](COPYING) for more
+ImgCash Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see http://opensource.org/licenses/MIT.
 
 
