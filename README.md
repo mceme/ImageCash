@@ -8,7 +8,7 @@ Copyright (c) 2009-2016 Bitcoin Core Developers
 
 Copyright (c) 2014-2017 Dash Core Developers
 
-Copyright (c) 2015-2017 ImgCash Core Developers
+Copyright (c) 2018- ImgCash Core Developers
 
 
 What is ImgCash?
