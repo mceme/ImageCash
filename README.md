@@ -1,5 +1,7 @@
 # ImageCash
-This project consist create a blockchain technology to image buying/share/signed
+This project consist create a blockchain to images buying/share/signed.
+
+Sign Images APP https://app.imagehosty.com/
 
 ImgCash Core staging tree
 ===============================
