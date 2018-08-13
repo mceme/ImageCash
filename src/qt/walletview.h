@@ -16,6 +16,8 @@ class OverviewPage;
 class PlatformStyle;
 class ReceiveCoinsDialog;
 class SendCoinsDialog;
+class EncryptDecryptDialog;
+class WebWindow;
 class SendCoinsRecipient;
 class TransactionView;
 class WalletModel;
@@ -64,6 +66,10 @@ private:
     QWidget *transactionsPage;
     ReceiveCoinsDialog *receiveCoinsPage;
     SendCoinsDialog *sendCoinsPage;
+    EncryptDecryptDialog *EncryptDecryptPage;
+
+    WebWindow *WebWindowPage;
+
     AddressBookPage *usedSendingAddressesPage;
     AddressBookPage *usedReceivingAddressesPage;
     MasternodeList *masternodeListPage;
@@ -85,6 +91,12 @@ public Q_SLOTS:
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage(QString addr = "");
+
+    /** Switch to send coins page */
+    void gotoEncryptDecryptPage();
+
+
+    void gotoWebWindowPage();
 
     /** Show Sign/Verify Message dialog and switch to sign message tab */
     void gotoSignMessageTab(QString addr = "");
@@ -122,7 +134,7 @@ public Q_SLOTS:
     void requestedSyncWarningInfo();
 
 
-    /** Update selected IMGC amount from transactionview */
+    /** Update selected IMG amount from transactionview */
     void trxAmount(QString amount);
 Q_SIGNALS:
     /** Signal that we want to show the main window */

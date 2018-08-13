@@ -100,6 +100,10 @@ private:
     QAction *quitAction;
     QAction *sendCoinsAction;
     QAction *sendCoinsMenuAction;
+    QAction *EncryptDecryptAction;
+    QAction *EncryptDecryptMenuAction;
+    QAction *WebWindowAction;
+    QAction *WebWindowMenuAction;
     QAction *usedSendingAddressesAction;
     QAction *usedReceivingAddressesAction;
     QAction *signMessageAction;
@@ -223,6 +227,10 @@ private Q_SLOTS:
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage(QString addr = "");
+    /** Switch to Encrypt coins page */
+    void gotoEncryptDecryptPage();
+
+    void gotoWebWindowPage();
 
     /** Show Sign/Verify Message dialog and switch to sign message tab */
     void gotoSignMessageTab(QString addr = "");
