@@ -40,6 +40,8 @@ QT_FORMS_UI = \
   qt/forms/sendcoinsentry.ui \
   qt/forms/signverifymessagedialog.ui \
   qt/forms/transactiondescdialog.ui
+  qt/forms/encryptdecryptdialog.ui \
+  qt/forms/webwindow.ui
 
 QT_MOC_CPP = \
   qt/moc_addressbookpage.cpp \
@@ -88,7 +90,11 @@ QT_MOC_CPP = \
   qt/moc_utilitydialog.cpp \
   qt/moc_walletframe.cpp \
   qt/moc_walletmodel.cpp \
-  qt/moc_walletview.cpp
+  qt/moc_walletview.cpp \
+  qt/moc_encryptdecryptdialog.cpp \
+  qt/moc_webwindow.cpp
+  
+  
 
 BITCOIN_MM = \
   qt/macdockiconhandler.mm \
