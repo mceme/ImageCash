@@ -1189,10 +1189,3 @@ moc_%.cpp: %.h
 	@test -f $(LRELEASE)
 	@$(MKDIR_P) $(@D)
 	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LRELEASE) -silent $< -qm $@
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 93f37c78d33fad98ecb1812c2f99711b0cf1bc5e
-=======
->>>>>>> 93f37c78d33fad98ecb1812c2f99711b0cf1bc5e
-=======
->>>>>>> 93f37c78d33fad98ecb1812c2f99711b0cf1bc5e
