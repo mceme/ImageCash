@@ -1,4 +1,4 @@
-bin_PROGRAMS += qt/imgcash-qt
+﻿bin_PROGRAMS += qt/imgcash-qt
 EXTRA_LIBRARIES += qt/libbitcoinqt.a
 
 # imgcash qt core #
@@ -39,8 +39,10 @@ QT_FORMS_UI = \
   qt/forms/sendcoinsdialog.ui \
   qt/forms/sendcoinsentry.ui \
   qt/forms/signverifymessagedialog.ui \
-  qt/forms/transactiondescdialog.ui
-
+  qt/forms/transactiondescdialog.ui \
+  qt/forms/encryptdecryptdialog.ui \
+  qt/forms/webwindow.ui
+  
 QT_MOC_CPP = \
   qt/moc_addressbookpage.cpp \
   qt/moc_addresstablemodel.cpp \
@@ -88,7 +90,9 @@ QT_MOC_CPP = \
   qt/moc_utilitydialog.cpp \
   qt/moc_walletframe.cpp \
   qt/moc_walletmodel.cpp \
-  qt/moc_walletview.cpp
+  qt/moc_walletview.cpp \
+  qt/moc_encryptdecryptdialog.cpp \
+  qt/moc_webwindow.cpp
 
 BITCOIN_MM = \
   qt/macdockiconhandler.mm \
@@ -165,7 +169,10 @@ BITCOIN_QT_H = \
   qt/walletmodel.h \
   qt/walletmodeltransaction.h \
   qt/walletview.h \
-  qt/winshutdownmonitor.h
+  qt/winshutdownmonitor.h \
+  qt/encryptdecryptdialog.h \
+  qt/webwindow.h \
+    qt/ecdsa.h
 
 RES_ICONS = \
   qt/res/icons/bitcoin.ico \
