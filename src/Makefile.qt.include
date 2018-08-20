@@ -92,7 +92,11 @@ QT_MOC_CPP = \
   qt/moc_walletmodel.cpp \
   qt/moc_walletview.cpp \
   qt/moc_encryptdecryptdialog.cpp \
+<<<<<<< HEAD
   qt/moc_webwindow.cpp
+=======
+  qt/moc_webwindow.cpp \
+>>>>>>> 6829200e810463f5b5b28c46312fa75819983a5a
 
 BITCOIN_MM = \
   qt/macdockiconhandler.mm \
@@ -172,7 +176,10 @@ BITCOIN_QT_H = \
   qt/winshutdownmonitor.h \
   qt/encryptdecryptdialog.h \
   qt/webwindow.h \
+<<<<<<< HEAD
     qt/ecdsa.h
+=======
+>>>>>>> 6829200e810463f5b5b28c46312fa75819983a5a
 
 RES_ICONS = \
   qt/res/icons/bitcoin.ico \
