@@ -622,11 +622,10 @@ moc_%.cpp: %.h
    $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 %.qm: %.ts
-<<<<<<< HEAD
+
  @test -f $(LRELEASE)
  @$(MKDIR_P) $(@D)
  $(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LRELEASE) -silent $< -qm $@
-=======
 	@test -f $(LRELEASE)
 	@$(MKDIR_P) $(@D)
 	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LRELEASE) -silent $< -qm $@
