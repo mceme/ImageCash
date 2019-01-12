@@ -6,7 +6,7 @@ Shell script to install a [ImageCash Masternode](https://www.imgcash.imagehosty.
 ```
 git clone https://github.com/mceme/ImageCash.git
 cd IMGCInstall
-bash imgcinstall.sh
+bash IMGCscript.sh
 ```
 ***
 
