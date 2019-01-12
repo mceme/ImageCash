@@ -1,4 +1,4 @@
-# ImageCoin
+# ImageCash
 Shell script to install a [ImageCash Masternode](https://www.imgcash.imagehosty.com/) on a Linux server running Ubuntu 18.04 or higher. Use it on your own risk.
 
 ***
