@@ -49,8 +49,8 @@ Also, if you want to check/start/stop **Imagecash** , run one of the following c
 **Ubuntu 18.04**:
 ```
 systemctl status imgcash #To check the service is running.
-systemctl start imgcash #To start ImageCoin service.
-systemctl stop imgcash #To stop ImageCoin service.
-systemctl is-enabled imgcash #To check whetether ImageCoin service is enabled on boot or not.
+systemctl start imgcash #To start Imagecash service.
+systemctl stop imgcash #To stop Imagecash service.
+systemctl is-enabled imgcash #To check whetether Imagecash service is enabled on boot or not.
 ```
 ***
