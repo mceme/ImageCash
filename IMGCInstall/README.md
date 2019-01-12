@@ -1,12 +1,12 @@
 # ImageCoin
-Shell script to install a [ImageCoin Masternode](https://www.imagecoin.imagehosty.com/) on a Linux server running Ubuntu 18.04 or higher. Use it on your own risk.
+Shell script to install a [ImageCash Masternode](https://www.imgcash.imagehosty.com/) on a Linux server running Ubuntu 18.04 or higher. Use it on your own risk.
 
 ***
 ## Installation:
 ```
-git clone https://github.com/mceme/Imgcash.git
-cd imginstall
-bash img-install.sh
+git clone https://github.com/mceme/ImageCash.git
+cd IMGCInstall
+bash imgcinstall.sh
 ```
 ***
 
