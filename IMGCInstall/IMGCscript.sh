@@ -2,12 +2,12 @@
 
 CONFIG_FILE='imgcash.conf'
 CONFIGFOLDER='/root/.imgcashcore'
-COIN_DAEMON='/usr/local/bin/Imgcashd'
-COIN_DAEMON_NAME='Imgcashd'
-COIN_CLI_NAME='Imgcash-cli'
-COIN_CLI='/usr/local/bin/Imgcash-cli'
+COIN_DAEMON='/usr/local/bin/imgcashd'
+COIN_DAEMON_NAME='imgcashd'
+COIN_CLI_NAME='imgcash-cli'
+COIN_CLI='/usr/local/bin/imgcash-cli'
 COIN_REPO='https://github.com/mceme/ImageCash/releases/download/1.0.8/imgcash-linux_18.04_x86_64.tar.xz'
-COIN_NAME='ImgCash'
+COIN_NAME='Imgcash'
 COIN_PORT=6899
 
 NODEIP=$(curl -s4 icanhazip.com)
