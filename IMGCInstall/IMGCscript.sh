@@ -49,7 +49,7 @@ function compile_node() {
   tar -xf $COIN_ZIP 2>&1
   compile_error
   rm -f $COIN_ZIP >/dev/null 2>&1
-  cp ImageCoin* /usr/local/bin
+  cp Imgcash* /usr/local/bin
   compile_error
   strip $COIN_DAEMON $COIN_CLI
   cd -
