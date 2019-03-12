@@ -1822,8 +1822,8 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
                 // synced, this means we probably got a bad peer for initial sync and need to continue with another one.
                 // By disconnecting we force to start a new iteration of initial headers sync in SendMessages
                 // TODO should we handle whitelisted peers here as we do in headers sync timeout handling?
-                pfrom->fDisconnect = true;
-                return error("detected bad peer for initial headers sync, disconnecting %d", pfrom->id);
+                //pfrom->fDisconnect = true;
+                //return error("detected bad peer for initial headers sync, disconnecting %d", pfrom->id);
             }
 
             if (nCount == 0) {
