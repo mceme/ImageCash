@@ -108,6 +108,10 @@ CMasternode::CollateralStatus CMasternode::CheckCollateral(const COutPoint& outp
 }
 
 CMasternode::CollateralStatus CMasternode::CheckCollateral(const COutPoint& outpoint, int& nHeightRet)
+
+int MASTERNODE_PRICE = 1000;
+if (chainActive.Height() > 168000) MASTERNODE_PRICE = 10000;
+
 {
     AssertLockHeld(cs_main);
 
@@ -116,7 +120,7 @@ CMasternode::CollateralStatus CMasternode::CheckCollateral(const COutPoint& outp
         return COLLATERAL_UTXO_NOT_FOUND;
     }
 
-    if(coin.out.nValue != 1000 * COIN) {
+    if(coin.out.nValue != MASTERNODE_PRICE * COIN || coin.out.nValue != 10000 * COIN) {
         return COLLATERAL_INVALID_AMOUNT;
     }
 
@@ -245,6 +249,9 @@ void CMasternode::Check(bool fForce)
 
 bool CMasternode::IsInputAssociatedWithPubkey()
 {
+	int MASTERNODE_PRICE = 1000;
+	if (chainActive.Height() > 168000) MASTERNODE_PRICE = 10000;
+
     CScript payee;
     payee = GetScriptForDestination(pubKeyCollateralAddress.GetID());
 
@@ -252,7 +259,7 @@ bool CMasternode::IsInputAssociatedWithPubkey()
     uint256 hash;
     if(GetTransaction(vin.prevout.hash, tx, Params().GetConsensus(), hash, true)) {
         BOOST_FOREACH(CTxOut out, tx.vout)
-            if(out.nValue == 1000*COIN && out.scriptPubKey == payee) return true;
+            if((out.nValue == MASTERNODE_PRICE*COIN || out.nValue == 10000*COIN) && out.scriptPubKey == payee) return true;
     }
 
     return false;
@@ -560,7 +567,7 @@ bool CMasternodeBroadcast::CheckOutpoint(int& nDos)
         }
 
         if (err == COLLATERAL_INVALID_AMOUNT) {
-            LogPrint("masternode", "CMasternodeBroadcast::CheckOutpoint -- Masternode UTXO should have 1000 DASH, masternode=%s\n", vin.prevout.ToStringShort());
+            LogPrint("masternode", "CMasternodeBroadcast::CheckOutpoint -- Masternode UTXO should have 10000 IMGC, masternode=%s\n", vin.prevout.ToStringShort());
             return false;
         }
 
