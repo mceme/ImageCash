@@ -108,11 +108,11 @@ CMasternode::CollateralStatus CMasternode::CheckCollateral(const COutPoint& outp
 }
 
 CMasternode::CollateralStatus CMasternode::CheckCollateral(const COutPoint& outpoint, int& nHeightRet)
-
-int MASTERNODE_PRICE = 1000;
+{
+    
+    int MASTERNODE_PRICE = 1000;
 if (chainActive.Height() > 168000) MASTERNODE_PRICE = 10000;
 
-{
     AssertLockHeld(cs_main);
 
     Coin coin;
