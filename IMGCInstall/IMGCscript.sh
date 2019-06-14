@@ -6,7 +6,7 @@ COIN_DAEMON='/usr/local/bin/imgcashd'
 COIN_DAEMON_NAME='imgcashd'
 COIN_CLI_NAME='imgcash-cli'
 COIN_CLI='/usr/local/bin/imgcash-cli'
-COIN_REPO='https://github.com/mceme/ImageCash/releases/download/1.10/imgcash-linux86x64.tar.xz'
+COIN_REPO='https://github.com/mceme/ImageCash/releases/download/1.12/imgcash_linux_x86_64_70212.tar.xz'
 COIN_NAME='Imgcash'
 COIN_PORT=6888
 
